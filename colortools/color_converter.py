@@ -706,5 +706,3 @@ def _apply_lab_transformation(value):
         value = (value * 903.3 + 16.0) / 116.0
     return value
 
-print(rgb_to_lab((255, 255, 255)))
-print(rgb_to_lab((0, 0, 0)))
