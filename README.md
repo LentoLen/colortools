@@ -1,7 +1,7 @@
 # Colortools
-> Python package for common color conversions and operations
+Python package for common color conversions and operations
 
-# Description
+## Description
 Python package for conversions between common color representations like RGB and HEX and color comparisons using CIE formulas.
 
 ## Features
