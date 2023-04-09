@@ -1,0 +1,5 @@
+setup.py
+colortools.egg-info/PKG-INFO
+colortools.egg-info/SOURCES.txt
+colortools.egg-info/dependency_links.txt
+colortools.egg-info/top_level.txt
