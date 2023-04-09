@@ -27,7 +27,8 @@ To install from PyPI with pip:
 $ python -m pip install colortools
 ```
 
-### Example usage: Using colortools in a Python script to calculate the CIEDE200 difference between to hex colors.
+### Example usage: 
+Using colortools in a Python script to calculate the CIEDE200 difference between to hex colors.
 ```python
 from colortools import color_converter, color_utils
 color1 = color_convert.hex_to_rgb("#ddf4ee")
@@ -36,17 +37,21 @@ deltaE = color_utils.CIEDE2000_rgb(color1, color2)
 ```
 
 ## Documentation
-### modules:
- #### color_utils: includes CIE functions to calculate the Delta E difference between to colors (perceptual difference).
-> functions:
+all color models are represented as tuples except hex codes: e.g: (255,255,255)
+### color_converter:
+syntax: colortools.color_converter.hex_to_rgb(hex)
 
-ciede2000(lab1, lab2)
+supported color models: rgb, hex, cmyk, hsl, hsv, lab, xyz
 
-    Calculate the CIEDE2000 color difference between two LAB tuples.
-    
-    Args:
-        lab1 (tuple): LAB tuple for the first color, in the format (L, a, b).
-        lab2 (tuple): LAB tuple for the second color, in the format (L, a, b).
-        
-    Returns:
-        float: The CIEDE2000 color difference between the two colors.
+### color_utils: 
+includes CIE functions to calculate the Delta E difference between to colors (perceptual difference).
+
+- ciede2000(lab1, lab2)
+- ciede2000_rgb(rgb1, rgb2)
+- cie76(lab1, lab2)
+- cie76_rgb(rgb1, rgb2)
+- cie94(lab1, lab2)
+- cie94_rgb(rgb1, rgb2)
+
+returns Delta E as float
+
