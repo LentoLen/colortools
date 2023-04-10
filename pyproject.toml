@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "colortools_LentoLen"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="LentoLen", email="lenn.vnn@gmail.com" },
 ]
@@ -19,4 +19,4 @@ classifiers = [
 
 [project.urls]
 "Homepage" = "https://github.com/LentoLen/colortools"
-"Bug Tracker" = "https://github.com/LentoLen/colortools/issues"
+"Bug Tracker" = "https://github.com/LentoLen/colortools/issue"
