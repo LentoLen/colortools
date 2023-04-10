@@ -136,5 +136,3 @@ def cie94_rgb(rgb1, rgb2):
     lab1 = rgb_to_lab(rgb1)
     lab2 = rgb_to_lab(rgb2)
     return cie94(lab1, lab2)
-
-print(cie94_rgb((200,200,200), (0,0,0)))
