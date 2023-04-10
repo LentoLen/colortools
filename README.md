@@ -21,10 +21,10 @@ Python package for conversions between common color representations like RGB and
 
 ## Quickstart
 ### Installation 
-To install from PyPI with pip:
+To install from test PyPI with pip:
 
 ```bash
-$ python -m pip install colortools
+$ python -m pip install -i https://test.pypi.org/simple/ colortools_LentoLen
 ```
 
 ### Example usage: 
