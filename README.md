@@ -32,8 +32,8 @@ Using colortools in a Python script to calculate the CIEDE200 difference between
 ```python
 from colortools import color_converter, color_utils
 color1 = color_converter.hex_to_rgb("#ddf4ee")
-coor2 = color_converter.hex_to_rgb("#88bfb1")
-deltaE = color_utils.CIEDE2000_rgb(color1, color2)
+color2 = color_converter.hex_to_rgb("#88bfb1")
+deltaE = color_utils.ciede2000_rgb(color1, color2)
 ```
 
 ## Documentation
