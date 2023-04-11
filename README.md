@@ -1,8 +1,8 @@
 # colortools
 Python package for common color conversions and operations
 
-[![PyPI - Version](https://img.shields.io/pypi/v/colortools.svg)](https://test.pypi.org/project/colortools-lentolen/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colortools.svg)](https://test.pypi.org/project/colortools-lentolen)
+[![PyPI - Version](https://img.shields.io/pypi/v/colortools-lentolen.svg)](https://pypi.org/project/colortools-lentolen)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colortools-lentolen.svg)](https://pypi.org/project/colortools-lentolen)
 
 -----
 
