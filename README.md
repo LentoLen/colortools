@@ -38,7 +38,7 @@ Python package for conversions between common color representations like RGB and
 To install from test PyPI with pip:
 
 ```console
-$ python -m pip install -i https://test.pypi.org/simple/ colortools_LentoLen
+$ python -m pip install -i https://test.pypi.org/simple/ colortools-LentoLen
 ```
 
 ### Example usage: 
