@@ -18,7 +18,7 @@ Python package for common color conversions and operations
 Python package for conversions between common color representations like RGB and HEX and color comparisons using CIE formulas.
 
 ## Features
-### Conversion between common color represantations
+### Conversion between common color representations
 - RGB
 - HEX
 - CMYK
@@ -35,7 +35,7 @@ Python package for conversions between common color representations like RGB and
 
 ## Quickstart
 ### Installation 
-To install from test PyPI with pip:
+To install from PyPI with pip:
 
 ```console
 $ python -m pip install colortools-lentolen
@@ -46,7 +46,7 @@ Using colortools in a Python script to calculate the CIEDE200 difference between
 ```python
 from colortools import color_utils
 color1 = color_utils.hex_to_rgb("#ddf4ee")
-color2 = color_converter.hex_to_rgb("#88bfb1")
+color2 = color_utils.hex_to_rgb("#88bfb1")
 deltaE = color_utils.ciede2000_rgb(color1, color2)
 ```
 
@@ -58,7 +58,7 @@ syntax example:
 colortools.color_utils.hex_to_rgb(hex)
 ```
 supported color models: rgb, hex, cmyk, hsl, hsv, lab, xyz, colorname
-> only hex codes can directly be converted to colornames. there are multiple color naming standards availabe: html (standard), html-ger, meodai, x11, [color-meanings.com](https://color-meanings.com).
+> only hex codes can directly be converted to colornames. There are multiple color naming standards availabe: html (standard), html-ger, meodai, x11, [color-meanings.com](https://color-meanings.com).
 
 This is how you can for example use the [meodai](https://github.com/meodai/color-names) GitHub color name collection:
 ```python
