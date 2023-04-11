@@ -1,8 +1,8 @@
 # colortools
 Python package for common color conversions and operations
 
-[![PyPI - Version](https://img.shields.io/pypi/v/colortools.svg)](https://pypi.org/project/colortools)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colortools.svg)](https://pypi.org/project/colortools)
+[![PyPI - Version](https://img.shields.io/pypi/v/colortools.svg)](https://test.pypi.org/project/colortools-lentolen/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colortools.svg)](https://test.pypi.org/project/colortools-lentolen)
 
 -----
 
@@ -38,7 +38,7 @@ Python package for conversions between common color representations like RGB and
 To install from test PyPI with pip:
 
 ```console
-$ python -m pip install -i https://test.pypi.org/simple/ colortools-lentolen
+$ python -m pip install colortools-lentolen
 ```
 
 ### Example usage: 
