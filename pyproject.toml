@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "colortools_LentoLen"
+name = "colortools_lentolen"
 dynamic = ["version"]
 description = 'A package to do color conversions and comparisons'
 readme = "README.md"
