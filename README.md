@@ -42,7 +42,7 @@ $ python -m pip install colortools-lentolen
 ```
 
 ### Example usage: 
-Using colortools in a Python script to calculate the CIEDE200 difference between to hex colors.
+Using colortools in a Python script to calculate the CIEDE200 difference between two hex colors.
 ```python
 from colortools import color_utils
 color1 = color_utils.hex_to_rgb("#ddf4ee")
@@ -58,7 +58,7 @@ syntax example:
 colortools.color_utils.hex_to_rgb(hex)
 ```
 supported color models: rgb, hex, cmyk, hsl, hsv, lab, xyz, colorname
-> only hex codes can directly be converted to colornames. There are multiple color naming standards availabe: html (standard), html-ger, meodai, x11, [color-meanings.com](https://color-meanings.com).
+> There are multiple color naming standards availabe: html (standard), html-ger, meodai, x11, [color-meanings.com](https://color-meanings.com).
 
 This is how you can for example use the [meodai](https://github.com/meodai/color-names) GitHub color name collection:
 ```python

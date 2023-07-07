@@ -156,6 +156,8 @@ def rgba_to_rgb(rgba: tuple) -> tuple:
 def _val_rgb(rgb):
     if len(rgb) > 3:
         return (rgb[0], rgb[1], rgb[2])
+    else:
+        return rgb
 
 def hex_to_hsl(hex: str) -> tuple:
     """
@@ -185,7 +187,7 @@ def hex_to_cmyk(hex: str) -> tuple:
     rgb = _val_rgb(rgb)
     return rgb_to_cmyk(rgb)
 
-def hex_to_hsl(hex: str) -> tuple:
+def hex_to_hsv(hex: str) -> tuple:
     """
     Convert HEX values to HSV values.
 
@@ -213,7 +215,7 @@ def hex_to_lab(hex: str) -> tuple:
     rgb = _val_rgb(rgb)
     return rgb_to_lab(rgb)
 
-def hex_to_lab(hex: str) -> tuple:
+def hex_to_xyz(hex: str) -> tuple:
     """
     Convert HEX values to XYZ values.
 
@@ -330,6 +332,20 @@ def hsl_to_rgb(hsl: tuple) -> tuple:
 
     return r, g, b
 
+def hsl_to_hex(hsl: tuple) -> tuple:
+    """
+    Convert HSL values to hex.
+
+    Args:
+    - HSL (tuple)
+
+    Returns:
+    - str: Hexadecimal color code.
+    """
+    rgb = hsl_to_rgb(hsl)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_hex(rgb)
+
 def hsl_to_cmyk(hsl: tuple) -> tuple:
     """
     Convert HSL values to CMYK values.
@@ -340,7 +356,7 @@ def hsl_to_cmyk(hsl: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the CMYK values
     """
-    rgb = hsl_to_rgb(hex)    
+    rgb = hsl_to_rgb(hsl)    
     rgb = _val_rgb(rgb)
     return rgb_to_cmyk(rgb)
 
@@ -354,9 +370,9 @@ def hsl_to_hsv(hsl: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the HSV values
     """
-    rgb = hsl_to_rgb(hex)    
+    rgb = hsl_to_rgb(hsl)    
     rgb = _val_rgb(rgb)
-    return rgb_to_hsl(rgb)
+    return rgb_to_hsv(rgb)
 
 def hsl_to_lab(hsl: tuple) -> tuple:
     """
@@ -368,7 +384,7 @@ def hsl_to_lab(hsl: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the LAB values
     """
-    rgb = hsl_to_rgb(hex)    
+    rgb = hsl_to_rgb(hsl)    
     rgb = _val_rgb(rgb)
     return rgb_to_lab(rgb)
 
@@ -382,7 +398,7 @@ def hsl_to_xyz(hsl: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the XYZ values
     """
-    rgb = hsl_to_rgb(hex)    
+    rgb = hsl_to_rgb(hsl)    
     rgb = _val_rgb(rgb)
     return rgb_to_xyz(rgb)
 
@@ -442,6 +458,20 @@ def cmyk_to_rgb(cmyk: tuple) -> tuple:
     
     return r, g, b
 
+def cmyk_to_hex(cmyk: tuple) -> tuple:
+    """
+    Convert CMYK values to hex.
+
+    Args:
+    - CMYK (tuple)
+
+    Returns:
+    - str: Hexadecimal color code.
+    """
+    rgb = cmyk_to_rgb(cmyk)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_hex(rgb)
+
 def cmyk_to_hsv(cmyk: tuple) -> tuple:
     """
     Convert CMYK values to HSV values.
@@ -452,9 +482,23 @@ def cmyk_to_hsv(cmyk: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the HSV values
     """
-    rgb = cmyk_to_rgb(hex)    
+    rgb = cmyk_to_rgb(cmyk)    
     rgb = _val_rgb(rgb)
     return rgb_to_hsv(rgb)
+
+def cmyk_to_hsl(cmyk: tuple) -> tuple:
+    """
+    Convert CMYK values to HSL values.
+
+    Args:
+    - CMYK (tuple)
+
+    Returns:
+    - tuple: A tuple containing the HSL values
+    """
+    rgb = cmyk_to_rgb(cmyk)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_hsl(rgb)
 
 def cmyk_to_lab(cmyk: tuple) -> tuple:
     """
@@ -466,7 +510,7 @@ def cmyk_to_lab(cmyk: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the LAB values
     """
-    rgb = cmyk_to_rgb(hex)    
+    rgb = cmyk_to_rgb(cmyk)    
     rgb = _val_rgb(rgb)
     return rgb_to_lab(rgb)
 
@@ -480,9 +524,51 @@ def cmyk_to_xyz(cmyk: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the XYZ values
     """
-    rgb = cmyk_to_rgb(hex)    
+    rgb = cmyk_to_rgb(cmyk)    
     rgb = _val_rgb(rgb)
     return rgb_to_xyz(rgb)
+
+def hsv_to_hsl(hsv: tuple) -> tuple:
+    """
+    Convert HSV values to HSL values.
+
+    Args:
+    - HSV (tuple)
+
+    Returns:
+    - tuple: A tuple containing the HSL values
+    """
+    rgb = hsv_to_rgb(hsv)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_hsl(rgb)
+
+def hsv_to_cmyk(hsv: tuple) -> tuple:
+    """
+    Convert HSV values to CMYK values.
+
+    Args:
+    - HSV (tuple)
+
+    Returns:
+    - tuple: A tuple containing the CMYK values
+    """
+    rgb = hsv_to_rgb(hsv)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_cmyk(rgb)
+
+def hsv_to_hex(hsv: tuple) -> tuple:
+    """
+    Convert HSV values to hex values.
+
+    Args:
+    - HSV (tuple)
+
+    Returns:
+    - str: Hexadecimal color code.
+    """
+    rgb = hsv_to_rgb(hsv)    
+    rgb = _val_rgb(rgb)
+    return rgb_to_hex(rgb)
 
 def hsv_to_lab(hsv: tuple) -> tuple:
     """
@@ -494,7 +580,7 @@ def hsv_to_lab(hsv: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the LAB values
     """
-    rgb = hsv_to_rgb(hex)    
+    rgb = hsv_to_rgb(hsv)    
     rgb = _val_rgb(rgb)
     return rgb_to_lab(rgb)
 
@@ -508,7 +594,7 @@ def hsv_to_xyz(hsv: tuple) -> tuple:
     Returns:
     - tuple: A tuple containing the XYZ values
     """
-    rgb = hsv_to_rgb(hex)    
+    rgb = hsv_to_rgb(hsv)    
     rgb = _val_rgb(rgb)
     return rgb_to_xyz(rgb)
 
@@ -853,7 +939,7 @@ def cie94_rgb(rgb1, rgb2):
 
 def hex_to_colorname(hex_color, naming_standard="html"):
     """
-    Find the closest matching color name for a given hex color in a color name system.
+    Find the closest matching color name for a given hex color in a color name system using the CIEDE2000 formula.
     
     Args:
         hex_color (str): Hex color code.
@@ -887,3 +973,70 @@ def hex_to_colorname(hex_color, naming_standard="html"):
             closest_color = color_name
 
     return closest_color
+
+def colorname_to_hex(colorname: str, naming_standard="html"):
+    """
+    Get the hex code of a colorname if it exists in the specified colorname system. Else returns None.  
+
+    Args:
+        colorname (string): colorname.
+        naming_standard (str): html, html-ger, x11, color-meanings.com, meodai(color-name Github Project with over 30.000 colors).
+
+    Returns:
+        str: matching hex code or None.
+    """
+    if naming_standard not in ["html", "html-ger", "x11", "color-meanings.com", "meodai"]:
+        raise ValueError("naming_standard input is not a valid option")
+    
+    # Read data from CSV file
+    color_dict = {}
+    with open(files("colortools") / "data" / f"{naming_standard}.csv", mode='r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            color_name = row[0]
+            hex_code = row[1]
+            color_dict[color_name] = hex_code
+    
+    for color_name, hex_code in color_dict.items():
+        if colorname.lower == color_name.lower():
+            return hex_code
+        
+    return None
+
+def rgb_to_colorname(rgb: tuple, naming_standard="html"):
+    """
+    Find the closest matching color name for a given rgb color tuple in a color name system.
+    
+    Args:
+        rgb (tuple): rgb tuple.
+        naming_standard (str): html, html-ger, x11, color-meanings.com, meodai(color-name Github Project with over 30.000 colors).
+
+    Returns:
+        str: Closest matching color name.
+    """
+    # validate input
+    _validate_rgb(rgb)
+    if len(rgb) == 4:
+        rgb = (rgb[0], rgb[1], rgb[2])
+        
+    hexc = rgb_to_hex(rgb)
+
+    # conversion
+    colorname = hex_to_colorname(hexc, naming_standard)
+    return colorname
+
+def colorname_to_rgb(colorname: str, naming_standard="html"):
+    """
+    Get the rgb tuple of a colorname if it exists in the specified colorname system. Else returns None.  
+
+    Args:
+        colorname (string): colorname.
+        naming_standard (str): html, html-ger, x11, color-meanings.com, meodai(color-name Github Project with over 30.000 colors).
+
+    Returns:
+        str: matching rgb tuple or None.
+    """
+    hexc = colorname_to_hex(colorname, naming_standard)
+    if hexc is not None:
+        return hex_to_rgb(hexc)
+    return hexc
