@@ -998,7 +998,7 @@ def colorname_to_hex(colorname: str, naming_standard="html"):
             color_dict[color_name] = hex_code
     
     for color_name, hex_code in color_dict.items():
-        if colorname.lower == color_name.lower():
+        if colorname.lower() == color_name.lower():
             return hex_code
         
     return None
